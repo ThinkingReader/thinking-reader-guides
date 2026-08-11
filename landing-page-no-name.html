@@ -1,0 +1,377 @@
+<!--
+  WHERE TO PASTE THIS: HTMLPub (or any HTML block: Squarespace, ShowIt, etc.)
+
+  WHAT TO SWAP:
+  1. Flodesk form embed code — marked with FLODESK FORM PLACEHOLDER below in Section 5.
+     In Flodesk: Audience > Forms > select your form > Embed > copy the HTML embed code
+     and paste it in place of the placeholder div.
+  2. Logo — marked with LOGO PLACEHOLDER in the header and About section. Replace the
+     placeholder div with an <img src="YOUR_LOGO_URL" alt="Thinking Reader Guides"> tag.
+  3. Redirect URL — set your Flodesk form's confirmation redirect to your thank-you page URL
+     once you upload thank-you-page.html.
+
+  BRAND: Cream #F8F5EF / Sage #A8B89A / Dusty Blue #7F9FB3 / Soft Gold #D8BE7A / Charcoal #3F4340
+  FONTS: Cormorant Garamond (headings) + Karla (body)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Does Your Child Notice While Reading? | Thinking Reader Guides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F8F5EF;
+    --sage: #A8B89A;
+    --dusty-blue: #7F9FB3;
+    --gold: #D8BE7A;
+    --charcoal: #3F4340;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.2;
+  }
+
+  section {
+    padding: 70px 24px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* subtle watercolor wash backgrounds, no imagery, just soft tonal shifts */
+  .section-alt {
+    background-color: #FFFFFF;
+  }
+
+  .section-sage-wash {
+    background: linear-gradient(180deg, var(--cream) 0%, #EFF2EA 100%);
+  }
+
+  header.hook {
+    text-align: center;
+    padding: 60px 24px 40px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: 'Karla', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dusty-blue);
+    margin-bottom: 18px;
+  }
+
+  h1.headline {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  .subhead {
+    font-size: 18px;
+    color: #5B5F5C;
+    max-width: 480px;
+    margin: 0 auto 32px;
+  }
+
+  .quiz-mockup {
+    width: 100%;
+    max-width: 380px;
+    margin: 32px auto 0;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 28px 30px;
+    text-align: left;
+    box-shadow: 0 12px 30px rgba(63, 67, 64, 0.1);
+  }
+
+  .quiz-mockup-badge {
+    background-color: var(--sage);
+    color: #FFFFFF;
+    font-family: 'Karla', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin: 0 auto 14px;
+    display: table;
+  }
+
+  .quiz-mockup-label {
+    font-family: 'Karla', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dusty-blue);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .quiz-mockup-stage {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: var(--charcoal);
+    padding: 8px 0;
+    border-bottom: 1px solid #EFEBE2;
+  }
+
+  .quiz-mockup-stage:last-child {
+    border-bottom: none;
+  }
+
+  .quiz-mockup-check {
+    color: var(--sage);
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .cta-scroll-btn {
+    display: inline-block;
+    background-color: var(--charcoal);
+    color: var(--cream);
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    margin: 10px 0 8px;
+  }
+
+  .mini-headline {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--dusty-blue);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  ul.value-bullets {
+    list-style: none;
+  }
+
+  ul.value-bullets li {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 22px;
+    font-size: 17px;
+  }
+
+  ul.value-bullets li::before {
+    content: "\2726";
+    color: var(--gold);
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .social-proof {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial {
+    background-color: var(--cream);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 32px 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    line-height: 1.4;
+    font-style: italic;
+    color: var(--charcoal);
+  }
+
+  .testimonial-attribution {
+    display: block;
+    margin-top: 16px;
+    font-family: 'Karla', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--dusty-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .about-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .logo-placeholder {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: var(--sage);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .about-copy {
+    font-size: 16px;
+    max-width: 460px;
+  }
+
+  .optin-section {
+    background-color: var(--charcoal);
+    color: var(--cream);
+    text-align: center;
+    padding: 70px 24px;
+  }
+
+  .optin-section h2 {
+    color: var(--cream);
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+
+  .form-container {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .flodesk-placeholder {
+    background-color: rgba(248, 245, 239, 0.08);
+    border: 2px dashed var(--gold);
+    border-radius: 8px;
+    padding: 32px 20px;
+    font-size: 14px;
+    color: var(--cream);
+    font-family: 'Karla', sans-serif;
+  }
+
+  .trust-copy {
+    font-size: 13px;
+    color: #C7C2B8;
+    margin-top: 18px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 13px;
+    color: #8A8D89;
+  }
+
+  @media (max-width: 480px) {
+    h1.headline { font-size: 36px; }
+    .optin-section h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hook">
+  <p class="eyebrow">Free 2-Minute Quiz for Homeschool Parents</p>
+  <h1 class="headline">What Does Your Child Notice While Reading?</h1>
+  <p class="subhead">In just 2 minutes, discover your child's Reading Stage and the next simple step to build stronger discussions.</p>
+  <a href="#optin" class="cta-scroll-btn">Take the Free Quiz</a>
+  <div class="quiz-mockup">
+    <div class="quiz-mockup-badge">2-Minute Assessment &middot; 4 Reading Stages</div>
+    <p class="quiz-mockup-label">Find Your Child's Reading Stage</p>
+    <div class="quiz-mockup-stage"><span class="quiz-mockup-check">&#10003;</span> Story Follower</div>
+    <div class="quiz-mockup-stage"><span class="quiz-mockup-check">&#10003;</span> Detail Detective</div>
+    <div class="quiz-mockup-stage"><span class="quiz-mockup-check">&#10003;</span> Pattern Finder</div>
+    <div class="quiz-mockup-stage"><span class="quiz-mockup-check">&#10003;</span> Thinking Reader</div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section-alt">
+    <p class="mini-headline">Here is what you will walk away with:</p>
+    <ul class="value-bullets">
+      <li>Know exactly what your child notices while reading, and what they're missing.</li>
+      <li>Discover your child's Reading Stage and the next simple step to help them think more deeply.</li>
+      <li>Learn one easy strategy you can use in your very next literature discussion.</li>
+    </ul>
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="#optin" class="cta-scroll-btn">Take the Free Quiz</a>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <p class="mini-headline" style="text-align: center;">Here's what Founding Families had to say...</p>
+    <div class="social-proof">
+      <div class="testimonial">
+        Great questions that need concrete, supported answers and not just &ldquo;feelings.&rdquo;
+        <span class="testimonial-attribution">Founding Family &amp; Homeschool Parent</span>
+      </div>
+      <!-- Add up to 2 more testimonials here using the same markup as above:
+      <div class="testimonial">
+        [Testimonial quote]
+        <span class="testimonial-attribution">[Name, Title]</span>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <section class="section-sage-wash">
+    <div class="about-flex">
+      <!-- LOGO PLACEHOLDER: replace with <img src="YOUR_LOGO_URL" alt="Thinking Reader Guides" style="width:96px;height:96px;border-radius:50%;object-fit:cover;"> -->
+      <div class="logo-placeholder">Logo</div>
+      <h2 style="font-size: 26px; margin-bottom: 4px;">Reading Should Be About Noticing</h2>
+      <p class="about-copy">Reading isn't about finding the right answer. It's about learning to notice more each time you open a book. That's the idea behind every Thinking Reader Guide, and this free quiz.</p>
+    </div>
+  </section>
+
+</main>
+
+<section class="optin-section" id="optin">
+  <h2>Find Your Child's Reading Stage</h2>
+  <div class="form-container">
+    <!-- FLODESK FORM PLACEHOLDER: replace this entire div with your Flodesk embed code.
+         In Flodesk: Audience > Forms > select form > Embed > copy HTML embed code. -->
+    <div class="flodesk-placeholder">
+      Flodesk form embed code goes here.<br>
+      Paste your Flodesk inline form embed in place of this box.
+    </div>
+    <p class="trust-copy">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Thinking Reader Guides. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
